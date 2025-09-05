@@ -1,0 +1,194 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #6C9FB3;
+    --text-color: #727171; 
+}
+
+html {
+    font-size: 10px;
+}
+
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #6C9FB3; /*border color of resume*/
+    color: #2A3E4C;
+}
+
+/* layouts*/
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    padding: 5rem;
+    background: #f8f5f5;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.profile {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+}
+
+/*common styles*/
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #41627a;
+}
+
+.subtitle_year {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    font-weight: 200;
+    margin: 0.8rem 0;
+}
+
+.subtitle_2 {
+    font-size: 1.8rem;
+    color: #41627a;
+    font-weight: 500;
+    margin: 0.8rem 0;
+}
+
+.subtitle_3 {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.profile_professional_summary_title {
+    margin-top: 2rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.profile_professional_summary_description {
+    margin-top: .5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.title {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+/*profile*/
+.profile_container {
+    display: flex;
+    gap: 3rem;
+}
+
+.left_column, .right_column {
+    display: flex;
+    gap: 5rem; /*add gaps between sections on left-side column*/
+    flex-direction: column;
+}
+
+/* adjust screen layout when smaller than 768 pixels*/
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 7rem;
+    }
+}
+
+.profile_profileImg {
+    max-width: 250px;
+    min-width: 250px;
+}
+
+.profile_profileImg img {
+    border-radius: 50%;
+}
+
+/*styling first and last name*/
+.profile_name_firstName {
+    color: #41627a;
+    font-weight: 200;
+    font-size: clamp(3rem, 9vw, 5rem);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: -0.7rem;
+}
+
+.profile_name_lastName {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: clamp(3.5rem, 16vw, 8rem);
+    text-transform: uppercase;
+    display: block;
+}
+
+/* HOLD for adding title to resume once applicable:
+.profile_title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+} */
+
+.download_button {
+    display: block;
+    text-decoration: none;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    font-weight: 600
+}
+
+
+.download_button:hover {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+@media only screen and (max-width: 768px) {
+    .profile_container {
+        flex-direction: column;
+    }
+}
+ 
+/*Expertise styling*/
+.skill_list {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    line-height: 2;
+    font-size: 1.3rem;
+}
+
+/*Education styling*/
+.education_item {
+    margin-top: 2rem;
+}
+
+/*Certification styling*/
+.certification_item {
+    margin-top: 2rem;
+}
+
+/*Experience styling*/
+.experience_item {
+    margin-top: 2rem;
+}
+
+.list_item {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
